@@ -102,7 +102,7 @@ size_x=$((size_y*2))
 steps=0
 
 redraw() {
-  draw_debug_box
+  tput home
   draw_block ${block_x} ${block_y} ${size_y}
 }
 
@@ -149,6 +149,6 @@ trap init WINCH
 tput civis
 init
 while true; do
-  sleep .005
+  sleep .05
   step
 done
